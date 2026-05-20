@@ -9,7 +9,7 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #0f0f10;
+  background: #0b0b0c;
   color: white;
   scroll-behavior: smooth;
 }
@@ -26,83 +26,103 @@ body {
 }
 
 .hero h1 {
-  font-size: 64px;
+  font-size: 72px;
+  letter-spacing: -2px;
   margin: 0;
-  letter-spacing: -1px;
 }
 
 .hero p {
   font-size: 20px;
-  color: #b5b5b5;
-  max-width: 600px;
+  color: #b8b8b8;
+  max-width: 650px;
 }
 
+/* BUTTON */
 .btn {
   margin-top: 20px;
-  padding: 12px 22px;
-  border-radius: 30px;
+  padding: 14px 26px;
+  border-radius: 999px;
   border: 1px solid white;
   text-decoration: none;
   color: white;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background: white;
   color: black;
+  transform: scale(1.05);
 }
 
-/* SECTION */
+/* SECTIONS */
 section {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  padding: 100px 20px;
+  padding: 120px 20px;
 }
 
-/* STATS */
+/* STATS (agency feel) */
 .stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
   text-align: center;
 }
 
 .stat {
-  padding: 20px;
-  background: #1a1a1d;
-  border-radius: 16px;
+  padding: 30px;
+  background: #161617;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.stat:hover {
+  transform: translateY(-6px);
 }
 
 /* PROJECTS */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
 .card {
-  background: #1a1a1d;
-  padding: 20px;
-  border-radius: 16px;
-  transition: 0.3s;
+  background: #161617;
+  padding: 25px;
+  border-radius: 18px;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  background: #1f1f22;
 }
 
-/* ABOUT */
-.about {
-  color: #cfcfcf;
+/* TEXT */
+h2 {
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+
+p {
+  color: #b8b8b8;
   line-height: 1.6;
 }
 
-/* CONTACT */
-.contact {
-  text-align: center;
-  padding-bottom: 120px;
+/* FADE IN EFFECT */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s ease forwards;
 }
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
 </head>
 
