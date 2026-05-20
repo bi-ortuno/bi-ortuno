@@ -9,7 +9,7 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #0b0b0c;
+  background: #0a0a0c;
   color: white;
   scroll-behavior: smooth;
 }
@@ -23,12 +23,13 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
+  background: radial-gradient(circle at top, #1a1a1f, #0a0a0c);
 }
 
 .hero h1 {
-  font-size: 72px;
-  letter-spacing: -2px;
+  font-size: 70px;
   margin: 0;
+  letter-spacing: -2px;
 }
 
 .hero p {
@@ -37,21 +38,19 @@ body {
   max-width: 650px;
 }
 
-/* BUTTON */
 .btn {
-  margin-top: 20px;
-  padding: 14px 26px;
+  margin-top: 25px;
+  padding: 14px 28px;
   border-radius: 999px;
   border: 1px solid white;
   text-decoration: none;
   color: white;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn:hover {
   background: white;
   color: black;
-  transform: scale(1.05);
 }
 
 /* SECTIONS */
@@ -61,47 +60,65 @@ section {
   padding: 120px 20px;
 }
 
-/* STATS (agency feel) */
+/* STATS */
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
+  gap: 20px;
   text-align: center;
 }
 
 .stat {
+  background: #16161a;
   padding: 30px;
-  background: #161617;
-  border-radius: 18px;
+  border-radius: 16px;
   transition: 0.3s;
 }
 
 .stat:hover {
+  transform: translateY(-6px);
+  background: #1f1f25;
+}
+
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  background: #16161a;
+  padding: 25px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.service:hover {
   transform: translateY(-6px);
 }
 
 /* PROJECTS */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  background: #161617;
-  padding: 25px;
-  border-radius: 18px;
-  transition: all 0.3s ease;
+  background: #16161a;
+  padding: 22px;
+  border-radius: 16px;
+  transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  background: #1f1f22;
 }
 
 /* TEXT */
 h2 {
-  font-size: 36px;
+  font-size: 38px;
   letter-spacing: -1px;
 }
 
@@ -110,18 +127,17 @@ p {
   line-height: 1.6;
 }
 
-/* FADE IN EFFECT */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeIn 1s ease forwards;
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding-bottom: 120px;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.footer {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  border-top: 1px solid #222;
 }
 </style>
 </head>
@@ -129,13 +145,13 @@ p {
 <body>
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero">
   <h1>Data Analyst</h1>
-  <p>I turn complex data into clear business decisions using Power BI, Looker Studio and analytics.</p>
-  <a class="btn" href="#projects">View Work</a>
-</div>
+  <p>I transform raw data into actionable insights using Power BI, Looker Studio, and business analytics.</p>
+  <a class="btn" href="#portfolio">View Work</a>
+</section>
 
-<!-- STATS (GLINT STYLE) -->
+<!-- STATS -->
 <section>
   <div class="stats">
     <div class="stat">
@@ -144,7 +160,7 @@ p {
     </div>
     <div class="stat">
       <h2>3</h2>
-      <p>Tools (Power BI, Looker, Excel)</p>
+      <p>BI Tools</p>
     </div>
     <div class="stat">
       <h2>2+</h2>
@@ -153,45 +169,71 @@ p {
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Selected Work</h2>
+<!-- ABOUT -->
+<section>
+  <h2>About</h2>
+  <p>
+    I specialize in turning complex datasets into clear, actionable business insights.
+    Focused on Power BI, Looker Studio, and data-driven decision making.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <h2>Services</h2>
+
+  <div class="services">
+    <div class="service">
+      <h3>Power BI Dashboards</h3>
+      <p>Interactive dashboards for KPI tracking and business insights.</p>
+    </div>
+
+    <div class="service">
+      <h3>Data Analysis</h3>
+      <p>Clean, analyze and interpret data for better decisions.</p>
+    </div>
+
+    <div class="service">
+      <h3>Reporting</h3>
+      <p>Automated reports using modern BI tools.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <h2>Case Studies</h2>
 
   <div class="projects">
 
     <div class="card">
       <h3>Sales Dashboard</h3>
-      <p>Revenue tracking and KPI analysis using Power BI.</p>
+      <p>Revenue tracking and KPI optimization using Power BI.</p>
     </div>
 
     <div class="card">
-      <h3>Customer Insights</h3>
-      <p>Customer segmentation and retention analysis.</p>
+      <h3>Customer Analysis</h3>
+      <p>Customer segmentation and churn reduction insights.</p>
     </div>
 
     <div class="card">
-      <h3>Looker Studio Report</h3>
-      <p>Marketing performance dashboard for decision making.</p>
+      <h3>Marketing Analytics</h3>
+      <p>Campaign performance tracking with Looker Studio.</p>
     </div>
 
   </div>
 </section>
 
-<!-- ABOUT -->
-<section>
-  <h2>About</h2>
-  <p class="about">
-    I am a Data Analyst focused on transforming raw data into actionable insights.
-    I specialize in Power BI, Looker Studio and business reporting.
-  </p>
-</section>
-
 <!-- CONTACT -->
-<section class="contact" id="contact">
-  <h2>Let’s connect</h2>
-  <p>Find me on LinkedIn</p>
+<section class="contact">
+  <h2>Let’s Connect</h2>
+  <p>Open to Data Analyst / BI opportunities</p>
   <a class="btn" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
 </section>
+
+<div class="footer">
+  © 2026 Data Portfolio
+</div>
 
 </body>
 </html>
